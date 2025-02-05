@@ -7,7 +7,9 @@ app.use(express.json());
 
 // Use the existing data from data.json
 let books = data;
-
+app.get('/', function (req, res) {
+    res.send('Hello World');
+  });
 // Create a new book (POST /books)
 app.post("/books", (req, res) => {
     const { book_id, title, author, genre, year, copies } = req.body;
